@@ -1,0 +1,94 @@
+@use "../mixins/pseudo.scss" as *;
+@use "../mixins/responsive.scss" as *;
+
+.section__mechanical {
+  padding-right: 24px;
+  margin-bottom: 110px;
+
+  @include responsive(tablet) {
+    padding: 0 40px;
+    margin-bottom: 140px;
+  }
+
+  @include responsive(desktop) {
+    padding: 0 165px;
+    display: flex;
+    gap: 125px;
+    align-items: center;
+  }
+
+  &--images {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 75px;
+  }
+
+  &--phone {
+    position: relative;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+
+    @include responsive(tablet) {
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+
+    &::after {
+      @include pseudo(100%, 100%) {
+        top: 0;
+        right: 0;
+        background-color: #f16818b3;
+        opacity: 0;
+        transition: opacity 0.4s;
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  }
+
+  &--glass {
+    border-radius: 20px;
+  }
+
+  &--texts {
+    padding-left: 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    @include responsive(tablet) {
+      flex-direction: row;
+      text-align: left;
+      padding-left: 0;
+      justify-content: space-between;
+    }
+
+    @include responsive(desktop) {
+      flex-direction: column;
+      width: 255px;
+    }
+  }
+
+  &--title {
+    font-size: 36px;
+    line-height: 38px;
+    font-weight: var(--font-weight-black);
+    color: var(--text-color);
+    margin: 0;
+    margin-bottom: 24px;
+
+    @include responsive(tablet) {
+      font-size: 32px;
+      line-height: 36px;
+      margin-right: 90px;
+    }
+  }
+
+  &--text {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: var(--font-weight-medium);
+    color: var(--secundary-text-color);
+  }
+}

@@ -1,1 +1,23 @@
 
+@use "../mixins/responsive.scss" as *;
+.title__keyboard{
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: var(--font-weight-black);
+    color: var(--text-color);
+    margin-bottom: 32px;
+}
+.section-mechanical__title {
+    font-size: 36px;
+    line-height: 38px;
+    font-weight: var(--font-weight-black);
+    color: var(--text-color);
+    margin: 0;
+    margin-bottom: 24px;
+
+    @include responsive(tablet) {
+      font-size: 32px;
+      line-height: 36px;
+      margin-right: 90px;
+    }
+  }

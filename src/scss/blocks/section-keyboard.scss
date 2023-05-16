@@ -1,0 +1,73 @@
+@use '../mixins/responsive.scss' as *;
+
+.section__keyboard{
+    padding-left: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-bottom: 24px;
+
+    @include responsive(tablet){
+        flex-direction: row;
+        margin-bottom: 40px;
+        padding-left: 40px;
+    }
+
+    @include responsive(desktop){
+        padding: 0 165px;
+    }
+}
+
+.texts__keyboard{
+    padding-right: 24px;
+
+    @include responsive(tablet){
+        padding-right: 0;
+    }
+}
+
+.title__keyboard{
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: var(--font-weight-black);
+    color: var(--text-color);
+    margin-bottom: 32px;
+}
+
+.text__keyboard{
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: var(--font-weight-medium);
+    color: var(--secundary-text-color);
+    margin-bottom: 32px;
+}
+
+.buttons__keyboard{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    @include responsive(tablet){
+        gap: 0.5rem;
+    }
+
+    @include responsive(desktop){
+        gap: 2rem;
+    }
+}
+
+.image__keyboard{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+    @include responsive(tablet){
+        position: relative;
+        left: 20px;
+        overflow: hidden;
+    }
+
+    @include responsive(desktop){
+        left: 0;
+        border-radius: 20px;
+    }
+}

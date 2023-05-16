@@ -1,1 +1,27 @@
+@use '../mixins/responsive.scss' as *;
 
+.button__preorder{
+    font-size: 16px;
+    font-weight: var(--font-weight-bold);
+    padding: 11px 15px;
+    border-radius: 8px;
+
+    @include responsive(tablet){
+        padding: 16px 27px;
+    }
+}
+
+.color__preorder{
+    background-color: var(--secundary-color);
+}
+
+.orange__preorder{
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.button__release{
+    font-size: 16px;
+    font-weight: var(--font-weight-bold);
+    color: var(--secundary-text-color);
+}

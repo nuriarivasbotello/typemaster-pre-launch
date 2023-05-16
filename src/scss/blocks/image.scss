@@ -1,0 +1,24 @@
+@use '../mixins/responsive.scss' as *;
+.image__keyboard{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+    @include responsive(tablet){
+        position: relative;
+        left: 20px;
+        overflow: hidden;
+    }
+
+    @include responsive(desktop){
+        left: 0;
+        border-radius: 20px;
+    }
+}
+.section-mechanical__images {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 75px;
+  }
+  .section-mechanical__glass {
+    border-radius: 20px;
+  }
